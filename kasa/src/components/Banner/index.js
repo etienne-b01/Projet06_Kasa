@@ -1,16 +1,11 @@
 import React from 'react';
 import './style.scss';
-import { Link } from 'react-router-dom';
-import kasaLogo from '../../assets/LOGO_color.svg';
+import BackgroundImage from '../../assets/background_image.png';
 
 const Banner = () => {
   return (
     <div>
-      <img src={kasaLogo} />
-      <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/about">A propos</Link>
-      </nav>
+      <img src={BackgroundImage} className="background_image" />
     </div>
   );
 };

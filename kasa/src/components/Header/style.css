@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kasa_logo {
+  height: 210px;
+  width: 68px;
+}
+
+.header_links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_links li {
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
