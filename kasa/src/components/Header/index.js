@@ -1,7 +1,6 @@
 import React from 'react';
 import kasaLogo from '../../assets/LOGO_color.svg';
 import './style.css';
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {

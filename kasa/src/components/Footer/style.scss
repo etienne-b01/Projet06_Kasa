@@ -1,7 +1,18 @@
 // @use 'styles';
+body {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 1240px;
+}
+
 .footer {
   background-color: black;
   color: white;
   height: 209px;
   width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
