@@ -20,11 +20,12 @@ const Banner = () => {
           className="background_image"
         />
       }
-      <p></p>
-      <h1 className="tagline">
-        Chez vous,
-        <br className="carriage_return" /> partout et ailleurs
-      </h1>
+      {HomePageDisplayed && (
+        <h1 className="tagline">
+          Chez vous,
+          <br className="carriage_return" /> partout et ailleurs
+        </h1>
+      )}
     </div>
   );
 };
