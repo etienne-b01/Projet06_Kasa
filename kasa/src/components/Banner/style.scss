@@ -5,3 +5,37 @@
   height: 223px;
   border-radius: 25px;
 }
+
+.container {
+  width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+}
+
+.tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carriage_return {
+  display: none;
+}

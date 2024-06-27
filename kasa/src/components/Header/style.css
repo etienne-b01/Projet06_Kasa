@@ -1,17 +1,20 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  max-width: 1240px;
+  width: 1440px;
+  display: flex;
+  align-items: center;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1240px;
 }
 
 .kasa_logo {
-  height: 210px;
-  width: 68px;
+  height: 68px;
+  width: 210px;
 }
 
 .header_links {
