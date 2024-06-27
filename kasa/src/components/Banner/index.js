@@ -1,11 +1,25 @@
 import React from 'react';
 import './style.scss';
-import BackgroundImage from '../../assets/background_image.png';
+import HomePageBackgroundImage from '../../assets/home_page_background_image.png';
+import AboutPageBackgroundImage from '../../assets/about_page_background_image.png';
+import { useLocation } from 'react-router-dom';
 
 const Banner = () => {
+  const location = useLocation();
+  const HomePageDisplayed = location.pathname === '/';
+
   return (
     <div className="container">
-      {<img src={BackgroundImage} className="background_image" />}
+      {
+        <img
+          src={
+            HomePageDisplayed
+              ? HomePageBackgroundImage
+              : AboutPageBackgroundImage
+          }
+          className="background_image"
+        />
+      }
       <p></p>
       <h1 className="tagline">
         Chez vous,
