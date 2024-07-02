@@ -1,11 +1,15 @@
-import React from 'react';
-import './style.scss';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-const About = () => {
+const Collapse = ({ heading, content }) => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <div>
-      <h1>A propos</h1>
+    <div className="collapse-item">
+      <div className="collapse-heading" onClick={() => setIsActive(!isActive)}>
+        <div>{heading}</div>
+        <div>{isActive ? '-' : '+'}</div>
+      </div>
+      {isActive && <div className="collapse-content">{content}</div>}
     </div>
   );
 };
