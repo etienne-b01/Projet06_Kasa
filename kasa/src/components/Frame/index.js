@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './style.css';
 import backgroundImage from '../../assets/background_image.png';
 
 const Frame = () => {

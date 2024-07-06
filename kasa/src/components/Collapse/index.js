@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 
 const Collapse = ({ heading, content }) => {
   const [isActive, setIsActive] = useState(false);

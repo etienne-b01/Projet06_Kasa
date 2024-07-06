@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Error from './pages/Error';
+import './style/style.css';
 
 export default function App() {
   return (

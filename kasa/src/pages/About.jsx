@@ -8,7 +8,6 @@ const About = () => {
     <div>
       <Banner />
       <div>
-        <h1>Collapse test</h1>
         <div>
           {AboutPageSections.map(({ heading, content }) => (
             <Collapse heading={heading} content={content} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './style.css';
 import kasaLogoBW from '../../assets/LOGO_BW.png';
 
 const Footer = () => {
