@@ -11,10 +11,7 @@ const Collapse = ({ heading, content }) => {
       <div className="collapse-heading" onClick={() => setIsActive(!isActive)}>
         <div>{heading}</div>
         <div>
-          <img
-            src={isActive ? ExpandArrow : CollapseArrow}
-            className="arrrow_image"
-          />
+          <img src={isActive ? ExpandArrow : CollapseArrow} />
         </div>
       </div>
       {isActive && <div className="collapse-content">{content}</div>}
