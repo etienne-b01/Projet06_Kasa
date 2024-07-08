@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-import CollapseArrow from '../../assets/arrow_collapse.svg';
 import ExpandArrow from '../../assets/arrow_expand.svg';
 
 const Collapse = ({ heading, content }) => {
@@ -11,7 +10,11 @@ const Collapse = ({ heading, content }) => {
       <div className="collapse-heading" onClick={() => setIsActive(!isActive)}>
         <div>{heading}</div>
         <div>
-          <img src={isActive ? ExpandArrow : CollapseArrow} />
+          <img
+            src={ExpandArrow}
+            className={`arrow-icon ${isActive ? 'rotate-down' : 'rotate-up'}`}
+            alt="icon for expanding or collapsing menu"
+          />
         </div>
       </div>
       {isActive && <div className="collapse-content">{content}</div>}
