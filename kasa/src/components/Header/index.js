@@ -5,16 +5,18 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className="header">
-      <img src={kasaLogo} className="kasa_logo" />
-      <ul className="header_links">
-        <NavLink to="/">
-          <li>Accueil</li>
-        </NavLink>
-        <NavLink to="/about">
-          <li>A propos</li>
-        </NavLink>
-      </ul>
+    <div className="header-content">
+      <div className="header">
+        <img src={kasaLogo} className="kasa_logo" />
+        <ul className="header_links">
+          <NavLink to="/">
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink to="/about">
+            <li>A propos</li>
+          </NavLink>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -9,23 +9,25 @@ const Banner = () => {
   const HomePageDisplayed = location.pathname === '/';
 
   return (
-    <div className="container">
-      {
-        <img
-          src={
-            HomePageDisplayed
-              ? HomePageBackgroundImage
-              : AboutPageBackgroundImage
-          }
-          className="background_image"
-        />
-      }
-      {HomePageDisplayed && (
-        <h1 className="tagline">
-          Chez vous,
-          <br className="carriage_return" /> partout et ailleurs
-        </h1>
-      )}
+    <div className="banner-content">
+      <div className="container">
+        {
+          <img
+            src={
+              HomePageDisplayed
+                ? HomePageBackgroundImage
+                : AboutPageBackgroundImage
+            }
+            className="background_image"
+          />
+        }
+        {HomePageDisplayed && (
+          <h1 className="tagline">
+            Chez vous,
+            <br className="carriage_return" /> partout et ailleurs
+          </h1>
+        )}
+      </div>
     </div>
   );
 };

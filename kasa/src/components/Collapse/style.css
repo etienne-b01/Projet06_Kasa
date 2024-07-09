@@ -1,7 +1,18 @@
+.collapse-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .collapse-item {
   margin-top: 20px;
   width: 1023px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .collapse-heading {

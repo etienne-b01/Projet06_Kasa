@@ -1,3 +1,9 @@
+.banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .background_image {
   object-fit: cover;
   width: 1240px;

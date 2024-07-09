@@ -6,18 +6,23 @@ const Collapse = ({ heading, content }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="collapse-item">
-      <div className="collapse-heading" onClick={() => setIsActive(!isActive)}>
-        <div>{heading}</div>
-        <div>
-          <img
-            src={ExpandArrow}
-            className={`arrow-icon ${isActive ? 'rotate-down' : 'rotate-up'}`}
-            alt="icon for expanding or collapsing menu"
-          />
+    <div className="collapse-block">
+      <div className="collapse-item">
+        <div
+          className="collapse-heading"
+          onClick={() => setIsActive(!isActive)}
+        >
+          <div>{heading}</div>
+          <div>
+            <img
+              src={ExpandArrow}
+              className={`arrow-icon ${isActive ? 'rotate-down' : 'rotate-up'}`}
+              alt="icon for expanding or collapsing menu"
+            />
+          </div>
         </div>
+        {isActive && <div className="collapse-content">{content}</div>}
       </div>
-      {isActive && <div className="collapse-content">{content}</div>}
     </div>
   );
 };
