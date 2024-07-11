@@ -7,13 +7,13 @@ import Collapse from '../Collapse';
 const Card = () => {
   console.log(AccomodationData);
   return (
-    <div>
+    <div className="card-style">
       <h1>Test vignettes toto</h1>
-      <ul>
+      {/* <ul>
         {AccomodationData.map((id, title) => (
           <li key={`${id}`}>{title}</li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

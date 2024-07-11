@@ -1,8 +1,6 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+.error-page-style {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }

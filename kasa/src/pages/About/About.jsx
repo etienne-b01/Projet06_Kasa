@@ -1,11 +1,12 @@
 import React from 'react';
-import Banner from '../components/Banner';
-import Collapse from '../components/Collapse';
-import { AboutPageSections } from '../data/CollapseData';
+import Banner from '../../components/Banner';
+import Collapse from '../../components/Collapse';
+import { AboutPageSections } from '../../data/CollapseData';
+import './style.css';
 
 const About = () => {
   return (
-    <div>
+    <div className="about-style">
       <Banner />
       <div>
         <div>
