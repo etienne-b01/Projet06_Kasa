@@ -1,8 +1,10 @@
-body {
+#root {
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
+
+/* ajouter vars : couleurs et breakpoints, styles communs à toutes pages (transition etc). layout au plus haut niveau, vs sidebar : au niv composant. */
