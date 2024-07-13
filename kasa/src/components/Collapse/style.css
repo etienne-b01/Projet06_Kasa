@@ -33,11 +33,38 @@
 }
 
 .collapse-content {
-  width: 1023px;
   box-sizing: border-box;
   background-color: #f6f6f6;
   font-size: 16px;
   padding: 20px 20px 20px 20px;
+}
+
+@media (min-width: 480px) {
+  .collapse-item,
+  .collapse-heading {
+    width: 460px;
+  }
+}
+
+@media (min-width: 768px) {
+  .collapse-item,
+  .collapse-heading {
+    width: 750px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .collapse-item,
+  .collapse-heading {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .collapse-item,
+  .collapse-heading {
+    width: 1023px;
+  }
 }
 
 @keyframes rotateDown {
