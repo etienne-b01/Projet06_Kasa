@@ -39,6 +39,27 @@
   padding: 20px 20px 20px 20px;
 }
 
+.collapse-content.expanded {
+  transform-origin: top;
+  animation: translateY 400ms ease;
+}
+
+@keyframes translateY {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 @media (min-width: 480px) {
   .collapse-item,
   .collapse-heading {
@@ -76,6 +97,10 @@
   }
 }
 
+.rotate-up {
+  transform: rotate(0deg);
+}
+
 @keyframes rotateUp {
   from {
     transform: rotate(180deg);
@@ -85,15 +110,11 @@
   }
 }
 
-.arrow-icon {
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-}
-
 .rotate-down {
   transform: rotate(180deg);
 }
 
-.rotate-up {
-  transform: rotate(0deg);
+.arrow-icon {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }

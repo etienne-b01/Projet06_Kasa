@@ -5,13 +5,17 @@ import ExpandArrow from '../../assets/arrow_expand.svg';
 const Collapse = ({ heading, content }) => {
   const [isActive, setIsActive] = useState(false);
 
+  // test pour débug
+  const toggleCollapse = () => {
+    setIsActive(!isActive);
+    console.log('Toggled collapse, isActive:', !isActive); // Debugging statement
+  };
+  //fin test
+
   return (
     <div className="collapse-block">
       <div className="collapse-item">
-        <div
-          className="collapse-heading"
-          onClick={() => setIsActive(!isActive)}
-        >
+        <div className="collapse-heading" onClick={toggleCollapse}>
           <div>{heading}</div>
           <div>
             <img
@@ -21,7 +25,11 @@ const Collapse = ({ heading, content }) => {
             />
           </div>
         </div>
-        {isActive && <div className="collapse-content">{content}</div>}
+        {isActive && (
+          <div className={`collapse-content ${isActive ? 'expanded' : ''}`}>
+            {content}
+          </div>
+        )}
       </div>
     </div>
   );
