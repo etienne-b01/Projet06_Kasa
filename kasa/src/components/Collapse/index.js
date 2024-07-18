@@ -8,7 +8,7 @@ const Collapse = ({ heading, content }) => {
   // test pour débug
   const toggleCollapse = () => {
     setIsActive(!isActive);
-    console.log('Toggled collapse, isActive:', !isActive); // Debugging statement
+    console.log('Toggled collapse, isActive:', !isActive);
   };
   //fin test
 
