@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css';
+import './style.scss';
 import ExpandArrow from '../../assets/arrow_expand.svg';
 
 const Collapse = ({ heading, content }) => {
@@ -13,9 +13,9 @@ const Collapse = ({ heading, content }) => {
   //fin test
 
   return (
-    <div className="collapse-block">
-      <div className="collapse-item">
-        <div className="collapse-heading" onClick={toggleCollapse}>
+    <div className="collapse">
+      <div className="collapse__item">
+        <div className="collapse__heading" onClick={toggleCollapse}>
           <div>{heading}</div>
           <div>
             <img
@@ -26,7 +26,7 @@ const Collapse = ({ heading, content }) => {
           </div>
         </div>
         {isActive && (
-          <div className={`collapse-content ${isActive ? 'expanded' : ''}`}>
+          <div className={`collapse__content ${isActive ? 'expanded' : ''}`}>
             {content}
           </div>
         )}

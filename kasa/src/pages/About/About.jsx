@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../../components/Banner';
 import Collapse from '../../components/Collapse';
 import { AboutPageSections } from '../../data/CollapseData';
-import './style.css';
+import './style.scss';
 
 const About = () => {
   return (

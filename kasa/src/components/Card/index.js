@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import './style.css';
+import './style.scss';
 import AccomodationData from '../../data/logements.json';
 import Collapse from '../Collapse';
 
