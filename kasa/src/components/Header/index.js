@@ -5,10 +5,10 @@ import './style.scss';
 
 const Header = () => {
   return (
-    <div className="header-content">
-      <div className="header">
+    <div className="header-container">
+      <div className="header-content">
         <img src={kasaLogo} className="kasa_logo" />
-        <ul className="header_links">
+        <ul className="header-links">
           <NavLink to="/">
             <li>Accueil</li>
           </NavLink>

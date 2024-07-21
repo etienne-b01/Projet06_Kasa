@@ -1,33 +1,23 @@
-.header-content {
+@import '../../style/style.scss';
+
+.header-container {
   width: 1240px;
   margin-bottom: 30px;
-}
-
-@media (min-width: 480px) {
-  .header-content {
+  @media (min-width: $small-phone-screen-width) {
     width: 460px;
   }
-}
-
-@media (min-width: 768px) {
-  .header-content {
+  @media (min-width: $big-phone-screen-width) {
     width: 750px;
   }
-}
-
-@media (min-width: 1024px) {
-  .header-content {
+  @media (min-width: $laptop-screen-width) {
     width: 960px;
   }
-}
-
-@media (min-width: 1200px) {
-  .header-content {
+  @media (min-width: $desktop-screen-width) {
     width: 1140px;
   }
 }
 
-.header {
+.header-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -39,7 +29,7 @@
   width: 210px;
 }
 
-.header_links {
+.header-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
