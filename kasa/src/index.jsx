@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Error from './pages/Error/Error';
+import Gallery from './pages/Gallery/Gallery';
 import './style/style.scss';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
+        <Route path="/gallery/:id" element={<Gallery />} />
       </Routes>
       <Footer />
     </BrowserRouter>

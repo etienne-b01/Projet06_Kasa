@@ -1,23 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link, NavLink } from 'react-router-dom';
 import './style.scss';
 import HousingData from '../../data/logements.json';
 import Collapse from '../Collapse';
 
 const Card = () => {
-  console.log(HousingData);
-
   const housingItems = HousingData.map(item => (
-    <div className="housing-list">
-      <ul>
-        <li key={item.id} className="housing-list__item">
-          {item.title}
-        </li>
-      </ul>
-    </div>
+    <NavLink
+      to={{
+        pathname: `/gallery/${item.id}`,
+      }}
+      key={item.id}
+      className="housing-item"
+    >
+      <p>{item.title}</p>
+      <img
+        src={item.pictures[0]}
+        alt={item.description}
+        className="housing-item__picture"
+      />
+    </NavLink>
   ));
 
-  return <div>{housingItems}</div>;
+  return <div className="housing-list">{housingItems}</div>;
 };
 
 export default Card;
