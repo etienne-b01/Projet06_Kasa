@@ -15,7 +15,7 @@ const Card = () => {
     >
       <p>{item.title}</p>
       <img
-        src={item.pictures[0]}
+        src={item.cover}
         alt={item.description}
         className="housing-item__picture"
       />
