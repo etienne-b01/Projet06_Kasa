@@ -4,17 +4,17 @@ import HousingData from '../../data/logements.json';
 import './style.scss';
 
 const Gallery = () => {
-  const { id } = useParams();
+  const { id: housingId } = useParams();
   const [housingItem, setHousingItem] = useState(null);
   const displayHousingItem = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    const currentHousingItem = HousingData.find(item => item.id === id);
+    const currentHousingItem = HousingData.find(item => item.id === housingId);
     setHousingItem(currentHousingItem);
     console.log(currentHousingItem);
-  }, [id, displayHousingItem]);
+  }, [housingId, displayHousingItem]);
 
   return <div>toto</div>;
 };
