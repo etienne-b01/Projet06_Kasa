@@ -1,4 +1,4 @@
-@import '../../style/style.scss';
+@import '../../style/variables';
 
 .container {
   width: 1240px;
@@ -41,7 +41,6 @@
   @media (min-width: $desktop-screen-width) {
     width: 1240px;
   }
-  //pb si suppression supra
 }
 
 .container__tagline {

@@ -1,3 +1,5 @@
+@import '../../style/variables';
+
 #root {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -6,13 +8,3 @@
   align-items: center;
   min-height: 100vh;
 }
-
-/* ajouter vars : couleurs et breakpoints, styles communs à toutes pages (transition etc). layout au plus haut niveau, vs sidebar : au niv composant. */
-
-$panel-backdrop-color: #f6f6f6;
-$heading-background-color: #ff6060;
-$small-phone-screen-width: 480px;
-$big-phone-screen-width: 768px;
-$laptop-screen-width: 1024px;
-$desktop-screen-width: 1200px;
-$large-desktop-screen-width: 1500px;

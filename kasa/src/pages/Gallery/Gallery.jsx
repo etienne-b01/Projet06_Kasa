@@ -5,7 +5,7 @@ import './style.scss';
 
 const Gallery = () => {
   const { id: housingId } = useParams();
-  const [housingItem, setHousingItem] = useState(null);
+  const [housingItem, setHousingItem] = useState([]);
   const displayHousingItem = useNavigate();
 
   useEffect(() => {
