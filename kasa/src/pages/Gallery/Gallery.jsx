@@ -4,19 +4,18 @@ import HousingData from '../../data/logements.json';
 import './style.scss';
 
 const Gallery = () => {
-  const { id: housingId } = useParams();
-  const [housingItem, setHousingItem] = useState([]);
-  const displayHousingItem = useNavigate();
+  const { id } = useParams();
+  const housingIdData = HousingData.filter(item => item.id === id);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
+  console.log(housingIdData);
 
-    const currentHousingItem = HousingData.find(item => item.id === housingId);
-    setHousingItem(currentHousingItem);
-    console.log(currentHousingItem);
-  }, [housingId, displayHousingItem]);
-
-  return <div>toto</div>;
+  return (
+    <div>
+      <h1>{housingIdData[0].title}</h1>
+      <img src={housingIdData[0].cover} alt={housingIdData[0].title} />
+      <p>{housingIdData[0].description}</p>
+    </div>
+  );
 };
 
 export default Gallery;
