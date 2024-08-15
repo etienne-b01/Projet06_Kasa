@@ -3,33 +3,32 @@ import './style.scss';
 import ExpandArrow from '../../assets/arrow_expand.svg';
 
 const Collapse = ({ heading, content }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  // test pour débug
-  const toggleCollapse = () => {
-    setIsActive(!isActive);
-    console.log('Toggled collapse, isActive:', !isActive);
-  };
-  //fin test
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="collapse">
       <div className="collapse__item">
-        <div className="collapse__heading" onClick={toggleCollapse}>
+        <div className="collapse__heading">
           <div>{heading}</div>
           <div>
             <img
               src={ExpandArrow}
-              className={`arrow-icon ${isActive ? 'rotate-down' : 'rotate-up'}`}
-              alt="icon for expanding or collapsing menu"
+              onClick={() => {
+                if (isExpanded === false) {
+                  setIsExpanded(true);
+                } else {
+                  setIsExpanded(false);
+                }
+              }}
+              className={
+                isExpanded ? 'arrow-icon rotate-down' : 'arrow-icon rotate-up'
+              }
             />
           </div>
         </div>
-        {isActive && (
-          <div className={`collapse__content ${isActive ? 'expanded' : ''}`}>
-            {content}
-          </div>
-        )}
+        <div>
+          {isExpanded ? <div className="collapse__content">{content}</div> : ''}
+        </div>
       </div>
     </div>
   );
