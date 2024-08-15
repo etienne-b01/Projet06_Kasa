@@ -54,18 +54,15 @@
       @media (min-width: $desktop-screen-width) {
         width: 1023px;
       }
-
-      .collapse__content {
-        box-sizing: border-box;
-        background-color: $panel-backdrop-color;
-        font-size: 16px;
-        padding: 20px 20px 20px 20px;
-      }
     }
   }
 }
 
-.collapse__content.expanded {
+.collapse__content {
+  box-sizing: border-box;
+  background-color: $panel-backdrop-color;
+  font-size: 16px;
+  padding: 20px 20px 20px 20px;
   transform-origin: top;
   animation: translateY 400ms ease;
 }
@@ -84,15 +81,6 @@
   100% {
     opacity: 1;
     transform: translateY(0%);
-  }
-}
-
-@keyframes rotateDown {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
   }
 }
 
