@@ -26,8 +26,8 @@ const Collapse = ({ heading, content }) => {
             />
           </div>
         </div>
-        <div>
-          {isExpanded ? <div className="collapse__content">{content}</div> : ''}
+        <div className={`collapse__content ${isExpanded ? 'expanded' : ''}`}>
+          {content}
         </div>
       </div>
     </div>
