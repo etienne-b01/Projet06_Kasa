@@ -59,21 +59,15 @@
 }
 
 .collapse__content {
-  height: 0px;
-  //max-height: 0px;
-  opacity: 0;
-  transition: height 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.expanded {
-  //height: auto;
-  //max-height: 300px;
   box-sizing: border-box;
   background-color: $panel-backdrop-color;
   font-size: 16px;
   padding: 20px 20px 20px 20px;
-  opacity: 1;
+}
+
+.collapse__content--container {
+  overflow: hidden;
+  transition: height ease 0.3s;
 }
 
 .rotate-up {
