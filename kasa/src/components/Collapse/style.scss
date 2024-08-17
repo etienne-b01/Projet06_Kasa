@@ -60,34 +60,20 @@
 
 .collapse__content {
   height: 0px;
-  overflow: hidden;
-  transition: height 1s ease;
+  //max-height: 0px;
+  opacity: 0;
+  transition: height 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .expanded {
-  height: auto;
+  //height: auto;
+  //max-height: 300px;
   box-sizing: border-box;
   background-color: $panel-backdrop-color;
   font-size: 16px;
   padding: 20px 20px 20px 20px;
-  //animation: translateY 400ms ease;
-}
-
-@keyframes translateY {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-
-  50% {
-    opacity: 0;
-    transform: translateY(-5%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+  opacity: 1;
 }
 
 .rotate-up {

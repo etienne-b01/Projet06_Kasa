@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.scss';
 import ExpandArrow from '../../assets/arrow_expand.svg';
 
 const Collapse = ({ heading, content }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  // code for calculating div height
+  useEffect(() => {
+    const contentElement = document.querySelector('.collapse__content');
+    if (isExpanded) {
+      contentElement.style.height = `${contentElement.offsetHeight}px`;
+    } else {
+      contentElement.style.height = '0px';
+    }
+  }, [isExpanded]);
 
   return (
     <div className="collapse">
