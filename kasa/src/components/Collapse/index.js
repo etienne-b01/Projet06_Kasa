@@ -22,13 +22,10 @@ const Collapse = ({ heading, content }) => {
           </div>
         </div>
         <div
-          className="collapse__content--container"
-          ref={containerRef}
-          style={
-            isExpanded
-              ? { height: containerRef.current.scrollHeight + 'px' }
-              : { height: '0px' }
+          className={
+            'collapse__content--container' + (isExpanded ? '' : ' expanded')
           }
+          ref={containerRef}
         >
           <div className="collapse__content">{content}</div>
         </div>

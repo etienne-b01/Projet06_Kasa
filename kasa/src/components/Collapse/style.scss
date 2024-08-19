@@ -67,11 +67,15 @@
 
 .collapse__content--container {
   overflow: hidden;
-  transition: height ease 0.3s;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.3s ease, max-height 0.3s ease;
+  max-height: 0;
 }
 
-.rotate-up {
-  transform: rotate(0deg);
+.collapse__content--container.expanded {
+  transform: scaleY(1);
+  max-height: 1000px;
 }
 
 .rotate-down {
