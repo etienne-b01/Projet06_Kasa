@@ -58,22 +58,22 @@
   }
 }
 
-.collapse__content {
-  box-sizing: border-box;
-  background-color: $panel-backdrop-color;
-  font-size: 16px;
-  padding: 20px 20px 20px 20px;
-}
-
-.collapse__content--container {
+.collapse__container {
   overflow: hidden;
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 0.3s ease, max-height 0.3s ease;
   max-height: 0;
+
+  .collapse__content {
+    box-sizing: border-box;
+    background-color: $panel-backdrop-color;
+    font-size: 16px;
+    padding: 20px 20px 20px 20px;
+  }
 }
 
-.collapse__content--container.expanded {
+.collapse__container.expanded {
   transform: scaleY(1);
   max-height: 1000px;
 }

@@ -22,9 +22,7 @@ const Collapse = ({ heading, content }) => {
           </div>
         </div>
         <div
-          className={
-            'collapse__content--container' + (isExpanded ? ' expanded' : '')
-          }
+          className={'collapse__container' + (isExpanded ? ' expanded' : '')}
           ref={containerRef}
         >
           <div className="collapse__content">{content}</div>
