@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import HousingData from '../../data/logements.json';
 import './style.scss';
 import Rating from '../../components/Rating';
+import Slideshow from '../../components/Slideshow';
 
 const Gallery = () => {
   const { id } = useParams();
@@ -16,6 +17,7 @@ const Gallery = () => {
       <p>{housingIdData[0].description}</p>
       <p>The rating is {housingIdData[0].rating}</p>
       {<Rating rating={rating} />}
+      <Slideshow />
     </div>
   );
 };
