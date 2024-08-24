@@ -6,10 +6,14 @@ function Rating({ rating }) {
   const starCount = parseInt(rating, 10);
   const stars = [];
   for (let i = 0; i < starCount; i++) {
-    stars.push(<img key={i} src={filledRatingStar} alt="rating point" />);
+    stars.push(
+      <img key={`filled-${i}`} src={filledRatingStar} alt="rating point" />
+    );
   }
   for (let i = 0; i < 5 - starCount; i++) {
-    stars.push(<img key={i} src={emptyRatingStar} alt="empty rating point" />);
+    stars.push(
+      <img key={`empty-${i}`} src={emptyRatingStar} alt="empty rating point" />
+    );
   }
   return stars;
 }
