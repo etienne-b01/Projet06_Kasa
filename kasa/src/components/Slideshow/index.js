@@ -51,8 +51,7 @@ const Slideshow = () => {
       })}
       <ControlButton changeSlide={previousSlide} direction={'prev'} />
       <ControlButton changeSlide={nextSlide} direction={'next'} />
-      <div>
-        counter is:
+      <div className="counter">
         {slideIndex}/{photoSet.length}
       </div>
     </div>

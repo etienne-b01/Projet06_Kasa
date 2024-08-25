@@ -1,10 +1,12 @@
+@import '../../style/variables';
+
 .container-slider {
-  max-width: 700px;
-  height: 500px;
+  max-width: 1240px;
+  height: 415px;
   margin: 100px auto 0;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
 }
 
 .slide {
@@ -39,7 +41,17 @@
   width: 25px;
   height: 25px;
   pointer-events: none;
-} */
+}
+ */
+
+.counter {
+  margin: 357px auto 0;
+  position: relative;
+  text-align: center;
+  color: white;
+  font: $main-font;
+  font-weight: 500;
+}
 
 .previous {
   top: 50%;
