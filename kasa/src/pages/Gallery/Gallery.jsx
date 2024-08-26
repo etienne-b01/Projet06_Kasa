@@ -10,6 +10,12 @@ const Gallery = () => {
   const { id } = useParams();
   const housingIdData = HousingData.filter(item => item.id === id);
   const rating = housingIdData[0].rating;
+  const equipmentList = (housingIdData[0].equipments || []).map(
+    (equipment, index) => <li key={index}>{equipment}</li>
+  );
+  const tagList = (housingIdData[0].tags || []).map((tag, index) => (
+    <li key={index}>{tag}</li>
+  ));
 
   return (
     <div>
@@ -17,15 +23,14 @@ const Gallery = () => {
       <img src={housingIdData[0].cover} alt={housingIdData[0].title} />
       <p>{housingIdData[0].description}</p>
       <p>{housingIdData[0].location}</p>
-      <p>{housingIdData[0].tags[0]}</p>
+      <p>Tags: {tagList}</p>
       <p>{housingIdData[0].host.name}</p>
       <img src={housingIdData[0].host.picture}></img>
-      {/*  map sur tags */}
       <Collapse
         heading={'Description'}
         content={housingIdData[0].description}
       />
-      <Collapse heading={'Équipements'} content={housingIdData[0].equipments} />
+      <Collapse heading={'Équipements'} content={equipmentList} />
       <p>The rating is {housingIdData[0].rating}</p>
       {<Rating rating={rating} />}
       <Slideshow />
