@@ -11,19 +11,18 @@ const Gallery = () => {
   const housingIdData = HousingData.filter(item => item.id === id);
   const rating = housingIdData[0].rating;
   const equipmentList = (housingIdData[0].equipments || []).map(
-    (equipment, index) => <li key={index}>{equipment}</li>
+    (equipment, index) => <li key={equipment}>{equipment}</li>
   );
   const tagList = (housingIdData[0].tags || []).map((tag, index) => (
-    <li key={index}>{tag}</li>
+    <li key={tag}>{tag}</li>
   ));
 
   return (
     <div>
       <h1>{housingIdData[0].title}</h1>
-      <img src={housingIdData[0].cover} alt={housingIdData[0].title} />
       <p>{housingIdData[0].description}</p>
       <p>{housingIdData[0].location}</p>
-      <p>Tags: {tagList}</p>
+      <ul className="gallery__tags">{tagList}</ul>
       <p>{housingIdData[0].host.name}</p>
       <img src={housingIdData[0].host.picture}></img>
       <Collapse

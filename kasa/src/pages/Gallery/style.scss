@@ -1,1 +1,21 @@
 @import '../../style/variables';
+
+.gallery__tags {
+  display: flex;
+  flex-direction: row;
+}
+
+.gallery__tags li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  min-width: 115px;
+  width: auto;
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $heading-background-color;
+}
