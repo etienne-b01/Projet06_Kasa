@@ -4,6 +4,7 @@ import HousingData from '../../data/logements.json';
 import './style.scss';
 import Rating from '../../components/Rating';
 import Slideshow from '../../components/Slideshow';
+import Collapse from '../../components/Collapse';
 
 const Gallery = () => {
   const { id } = useParams();
@@ -15,6 +16,16 @@ const Gallery = () => {
       <h1>{housingIdData[0].title}</h1>
       <img src={housingIdData[0].cover} alt={housingIdData[0].title} />
       <p>{housingIdData[0].description}</p>
+      <p>{housingIdData[0].location}</p>
+      <p>{housingIdData[0].tags[0]}</p>
+      <p>{housingIdData[0].host.name}</p>
+      <img src={housingIdData[0].host.picture}></img>
+      {/*  map sur tags */}
+      <Collapse
+        heading={'Description'}
+        content={housingIdData[0].description}
+      />
+      <Collapse heading={'Équipements'} content={housingIdData[0].equipments} />
       <p>The rating is {housingIdData[0].rating}</p>
       {<Rating rating={rating} />}
       <Slideshow />
