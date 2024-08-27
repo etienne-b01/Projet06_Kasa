@@ -19,20 +19,38 @@ const Gallery = () => {
 
   return (
     <div>
-      <h1>{housingIdData[0].title}</h1>
-      <p>{housingIdData[0].description}</p>
-      <p>{housingIdData[0].location}</p>
-      <ul className="gallery__tags">{tagList}</ul>
-      <p>{housingIdData[0].host.name}</p>
-      <img src={housingIdData[0].host.picture}></img>
-      <Collapse
-        heading={'Description'}
-        content={housingIdData[0].description}
-      />
-      <Collapse heading={'Équipements'} content={equipmentList} />
-      <p>The rating is {housingIdData[0].rating}</p>
-      {<Rating rating={rating} />}
       <Slideshow />
+      <div className="card__description">
+        <div className="card__left-half">
+          <div>
+            <h1>{housingIdData[0].title}</h1>
+          </div>
+          <div>
+            <p>{housingIdData[0].location}</p>
+          </div>
+          <div className="gallery">
+            <ul className="gallery__tags">{tagList}</ul>
+          </div>
+        </div>
+        <div className="card__left-right">
+          <div className="owner-details">
+            <p>{housingIdData[0].host.name}</p>
+            <img src={housingIdData[0].host.picture}></img>
+          </div>
+          <div>{<Rating rating={rating} />}</div>
+        </div>
+      </div>
+      <div className="collapse">
+        <div className="half">
+          <Collapse
+            heading={'Description'}
+            content={housingIdData[0].description}
+          />
+        </div>
+        <div className="half">
+          <Collapse heading={'Équipements'} content={equipmentList} />
+        </div>
+      </div>
     </div>
   );
 };

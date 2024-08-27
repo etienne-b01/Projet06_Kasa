@@ -1,11 +1,18 @@
 @import '../../style/variables';
 
+.gallery {
+  padding-left: 0px;
+}
+
 .gallery__tags {
   display: flex;
   flex-direction: row;
+  align-content: flex-start;
+  padding-left: 0px;
 }
 
 .gallery__tags li {
+  margin-left: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,4 +25,59 @@
   padding-left: 10px;
   padding-right: 10px;
   background-color: $heading-background-color;
+}
+
+.owner-details p {
+  color: $heading-background-color;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.owner-details img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__left-half {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__left-half p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card__left-half h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: $heading-background-color;
+}
+
+.card__left-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: row;
+}
+
+.half {
+  max-width: 500px;
 }
