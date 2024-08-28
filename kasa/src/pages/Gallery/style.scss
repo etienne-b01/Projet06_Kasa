@@ -9,6 +9,7 @@
   flex-direction: row;
   align-content: flex-start;
   padding-left: 0px;
+  margin-top: 10px;
 }
 
 .gallery__tags li {
@@ -27,6 +28,10 @@
   background-color: $heading-background-color;
 }
 
+.owner-details {
+  margin-top: 24px;
+}
+
 .owner-details p {
   color: $heading-background-color;
   font-size: 18px;
@@ -39,6 +44,8 @@
   border-radius: 50%;
   object-fit: cover;
   overflow: hidden;
+  margin-left: 10px;
+  margin-right: 0px;
 }
 
 .card__description {
@@ -55,12 +62,17 @@
 .card__left-half p {
   font-size: 18px;
   font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .card__left-half h1 {
   font-size: 36px;
   font-weight: 500;
   color: $heading-background-color;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  max-width: 658px;
 }
 
 .card__left-right {
@@ -71,6 +83,12 @@
 .owner-details {
   display: flex;
   flex-direction: row;
+  margin-bottom: 21px;
+}
+
+.owner-details p {
+  max-width: 100px;
+  text-align: right;
 }
 
 .collapse {
