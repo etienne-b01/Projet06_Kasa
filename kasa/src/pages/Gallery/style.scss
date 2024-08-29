@@ -75,7 +75,7 @@
   max-width: 658px;
 }
 
-.card__left-right {
+.card__right-half {
   display: flex;
   flex-direction: column;
 }
@@ -94,8 +94,17 @@
 .collapse {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-.half {
-  max-width: 500px;
+.half .collapse__item {
+  max-width: 582px;
+}
+
+.half .collapse__heading {
+  max-width: 582px;
+}
+
+.half .collapse__content {
+  max-width: 582px;
 }

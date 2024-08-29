@@ -32,7 +32,7 @@ const Gallery = () => {
             <ul className="gallery__tags">{tagList}</ul>
           </div>
         </div>
-        <div className="card__left-right">
+        <div className="card__right-half">
           <div className="owner-details">
             <p>{housingIdData[0].host.name}</p>
             <img src={housingIdData[0].host.picture}></img>
