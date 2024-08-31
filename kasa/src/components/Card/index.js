@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate, Link, NavLink } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './style.scss';
 import HousingData from '../../data/logements.json';
-import Collapse from '../Collapse';
 
 const Card = () => {
   const housingItems = HousingData.map(item => (
@@ -13,12 +12,12 @@ const Card = () => {
       key={item.id}
       className="housing-item"
     >
-      <p>{item.title}</p>
       <img
         src={item.cover}
         alt={item.description}
         className="housing-item__picture"
       />
+      <p>{item.title}</p>
     </NavLink>
   ));
 
