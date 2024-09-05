@@ -1,11 +1,34 @@
 @import '../../style/variables';
 
 .housing-list {
-  width: 1240px;
-  background-color: $panel-backdrop-color;
+  @media (min-width: $small-phone-screen-width),
+    (min-width: $big-phone-screen-width),
+    (min-width: $laptop-screen-width) {
+    width: 335px;
+  }
+  @media (min-width: $desktop-screen-width) {
+    width: 1240px;
+  }
+  @media (min-width: $small-phone-screen-width),
+    (min-width: $big-phone-screen-width),
+    (min-width: $laptop-screen-width) {
+    background-color: none;
+  }
+  @media (min-width: $desktop-screen-width) {
+    background-color: $panel-backdrop-color;
+  }
+
   border-radius: 25px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  @media (min-width: $small-phone-screen-width),
+    (min-width: $big-phone-screen-width),
+    (min-width: $laptop-screen-width) {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: $desktop-screen-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   justify-items: center;
   align-items: center;
   grid-column-gap: 0px;
@@ -19,26 +42,41 @@
 }
 
 .housing-item {
-  width: 340px;
-  height: 340px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  @media (min-width: $small-phone-screen-width),
+    (min-width: $big-phone-screen-width),
+    (min-width: $laptop-screen-width) {
+    width: 335px;
+    height: 255px;
+  }
+  @media (min-width: $desktop-screen-width) {
+    width: 340px;
+    height: 340px;
+  }
 }
 
 .housing-item p {
   position: absolute;
-  top: 270px;
-  left: 16px;
-  font-family: $main-font;
   color: white;
   font-size: 18px;
   font-weight: 700;
   line-height: 25.67px;
   text-align: left;
+  @media (min-width: $small-phone-screen-width),
+    (min-width: $big-phone-screen-width),
+    (min-width: $laptop-screen-width) {
+    top: 180px;
+    left: 16px;
+  }
+  @media (min-width: $desktop-screen-width) {
+    top: 270px;
+    left: 16px;
+  }
 }
 
 .housing-item__picture {

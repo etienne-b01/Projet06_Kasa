@@ -11,7 +11,11 @@ const About = () => {
       <div>
         <div>
           {AboutPageSections.map(({ heading, content }) => (
-            <Collapse heading={heading} content={content} />
+            <Collapse
+              // key={}
+              heading={heading}
+              content={content}
+            />
           ))}
         </div>
       </div>

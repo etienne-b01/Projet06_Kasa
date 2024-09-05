@@ -22,10 +22,7 @@ const Banner = () => {
           />
         }
         {HomePageDisplayed && (
-          <h1 className="container__tagline">
-            Chez vous,
-            <br className="container__carriage_return" /> partout et ailleurs
-          </h1>
+          <h1 className="container__tagline">Chez vous, partout et ailleurs</h1>
         )}
       </div>
     </div>
