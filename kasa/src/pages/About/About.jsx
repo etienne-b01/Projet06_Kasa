@@ -10,9 +10,9 @@ const About = () => {
       <Banner />
       <div>
         <div>
-          {AboutPageSections.map(({ heading, content }) => (
+          {AboutPageSections.map(({ heading, content }, index) => (
             <Collapse
-              // key={}
+              key={`${heading}-${index}`} // concatenating heading and index gives unique key
               heading={heading}
               content={content}
             />

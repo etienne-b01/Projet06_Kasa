@@ -6,7 +6,6 @@ export default function ControlButton({ direction, changeSlide }) {
   return (
     <button
       onClick={() => {
-        console.log('Button clicked:', direction);
         changeSlide();
       }}
       className={

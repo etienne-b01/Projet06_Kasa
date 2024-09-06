@@ -22,7 +22,9 @@ const Banner = () => {
           />
         }
         {HomePageDisplayed && (
-          <h1 className="container__tagline">Chez vous, partout et ailleurs</h1>
+          <h1 className="container__tagline">
+            <span>Chez vous,</span> <span>partout et ailleurs</span>
+          </h1>
         )}
       </div>
     </div>
