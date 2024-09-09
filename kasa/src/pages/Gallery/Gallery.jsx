@@ -19,7 +19,7 @@ const Gallery = () => {
 
   return (
     <div>
-      <Slideshow />
+      <Slideshow className="gallery__slideshow" />
       <div className="card__description">
         <div className="card__left-half">
           <div>
@@ -37,7 +37,9 @@ const Gallery = () => {
             <p>{housingIdData[0].host.name}</p>
             <img src={housingIdData[0].host.picture}></img>
           </div>
-          <div>{<Rating rating={rating} />}</div>
+          <div className="owner-details-rating">
+            {<Rating rating={rating} />}
+          </div>
         </div>
       </div>
       <div className="collapse">

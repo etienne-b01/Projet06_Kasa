@@ -1,0 +1,51 @@
+@import '../../style/variables';
+
+.control_button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.control_button img {
+  @media (min-width: $small-phone-screen-width) {
+    width: 11px;
+  }
+
+  @media (min-width: $small-phone-screen-width) {
+    height: 20px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    width: 47px;
+  }
+
+  @media (min-width: $big-phone-screen-width) {
+    height: 79px;
+  }
+}
+
+.previous {
+  top: 50%;
+  transform: translateY(-60%);
+  left: 20px;
+  @media (min-width: $small-phone-screen-width) {
+    left: 3px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    left: 20px;
+  }
+}
+
+.next {
+  top: 50%;
+  transform: translateY(-60%);
+  @media (min-width: $small-phone-screen-width) {
+    right: 3px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    right: 20px;
+  }
+}

@@ -38,6 +38,7 @@ const Slideshow = () => {
     <div className="container-slider">
       {photoSet.map((url, index) => {
         const fileName = url.substring(url.lastIndexOf('/') + 1);
+        //Using the filename for a key by finding the position of the last slash in the URL then extracting whatever content comes after it.
         return (
           <div
             key={fileName}

@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollLeftArrow from '../../assets/arrow_scroll_left.png';
 import ScrollRightArrow from '../../assets/arrow_scroll_right.png';
+import './style.scss';
 
 export default function ControlButton({ direction, changeSlide }) {
   return (

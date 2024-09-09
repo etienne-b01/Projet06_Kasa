@@ -54,13 +54,14 @@
   width: 100%;
   position: absolute;
   left: 10px;
-  @media (min-width: $small-phone-screen-width),
-    (min-width: $big-phone-screen-width) {
+  @media (min-width: $small-phone-screen-width) {
     font-size: 24px;
     text-align: left;
     top: 20px;
   }
-  @media (min-width: $desktop-screen-width), (min-width: $laptop-screen-width) {
+  @media (min-width: $desktop-screen-width),
+    (min-width: $laptop-screen-width),
+    (min-width: $big-phone-screen-width) {
     font-size: 48px;
     text-align: center;
     top: 40px;

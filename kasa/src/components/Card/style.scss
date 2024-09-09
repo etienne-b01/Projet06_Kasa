@@ -20,18 +20,22 @@
 
   border-radius: 25px;
   display: grid;
-  @media (min-width: $small-phone-screen-width),
-    (min-width: $big-phone-screen-width),
-    (min-width: $laptop-screen-width) {
+  @media (min-width: $small-phone-screen-width) {
     grid-template-columns: 1fr;
   }
-  @media (min-width: $desktop-screen-width) {
+  @media (min-width: $big-phone-screen-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+  }
+
+  @media (min-width: $laptop-screen-width), (min-width: $desktop-screen-width) {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0px;
   }
 
   justify-items: center;
   align-items: center;
-  grid-column-gap: 0px;
+
   grid-row-gap: 50px;
   margin-left: 0;
   margin-right: 0;

@@ -1,8 +1,18 @@
 @import '../../style/variables';
 
 .container-slider {
-  width: 1240px;
-  height: 415px;
+  @media (min-width: $small-phone-screen-width) {
+    width: 335px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    width: 1240px;
+  }
+  @media (min-width: $small-phone-screen-width) {
+    height: 255px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    height: 415px;
+  }
   margin: 100px auto 0;
   position: relative;
   overflow: hidden;
@@ -27,16 +37,6 @@
   opacity: 1;
 }
 
-.control_button {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-}
-
 .counter {
   margin: 357px auto 0;
   position: relative;
@@ -44,16 +44,4 @@
   color: white;
   font: $main-font;
   font-weight: 500;
-}
-
-.previous {
-  top: 50%;
-  left: 20px;
-  transform: translateY(-60%);
-}
-
-.next {
-  top: 50%;
-  right: 20px;
-  transform: translateY(-60%);
 }
