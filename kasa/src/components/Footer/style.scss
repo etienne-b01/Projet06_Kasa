@@ -5,33 +5,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: flex-end;
   background-color: black;
   color: white;
   height: 209px;
   width: 1440px;
   margin-top: 20px;
   @media (min-width: $small-phone-screen-width) {
-    width: 515px;
+    width: 375px;
+    font-size: 12px;
   }
   @media (min-width: $big-phone-screen-width) {
     width: 840px;
   }
   @media (min-width: $laptop-screen-width) {
     width: 1075px;
+    font-size: 24px;
   }
   @media (min-width: $desktop-screen-width) {
     width: 1277px;
+    font-size: 24px;
   }
   @media (min-width: $large-desktop-screen-width) {
     width: 1440px;
+    font-size: 24px;
   }
 
   .footer_para {
-    margin-top: auto;
+    @media (min-width: $small-phone-screen-width) {
+      margin-top: 10px;
+      width: 90px;
+      text-align: center;
+    }
+    @media (min-width: $big-phone-screen-width) {
+      margin-top: 29px;
+      width: 100%;
+    }
   }
 }
 
 .footer img {
-  margin-top: auto;
+  @media (min-width: $small-phone-screen-width) {
+    margin-top: 0px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    margin-top: 74px;
+  }
 }
