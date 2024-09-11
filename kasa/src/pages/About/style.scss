@@ -6,3 +6,39 @@
   align-items: center;
   justify-content: center;
 }
+
+.about-style .collapse__item {
+  @media (min-width: $small-phone-screen-width) {
+    width: 335px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    width: 1023px;
+  }
+}
+
+.about-style .collapse__heading {
+  @media (min-width: $small-phone-screen-width) {
+    width: 335px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    width: 1023px;
+  }
+}
+
+.about-style .collapse__heading p {
+  @media (min-width: $small-phone-screen-width) {
+    font-size: 13px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    font-size: 18px;
+  }
+}
+
+.about-style .collapse__content {
+  @media (min-width: $small-phone-screen-width) {
+    width: 335px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    width: 1023px;
+  }
+}

@@ -10,7 +10,7 @@ const Collapse = ({ heading, content }) => {
     <div className="collapse">
       <div className="collapse__item">
         <div className="collapse__heading">
-          <div>{heading}</div>
+          <p>{heading}</p>
           <div>
             <img
               src={ExpandArrow}

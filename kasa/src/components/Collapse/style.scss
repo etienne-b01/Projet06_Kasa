@@ -15,15 +15,9 @@
     width: 1023px;
     border-radius: 5px;
     @media (min-width: $small-phone-screen-width) {
-      width: 460px;
+      width: 335px;
     }
     @media (min-width: $big-phone-screen-width) {
-      width: 750px;
-    }
-    @media (min-width: $laptop-screen-width) {
-      width: 960px;
-    }
-    @media (min-width: $desktop-screen-width) {
       width: 1023px;
     }
 
@@ -44,15 +38,9 @@
       border-radius: 5px;
       padding: 0px 20px 0px 20px;
       @media (min-width: $small-phone-screen-width) {
-        width: 460px;
+        width: 335px;
       }
       @media (min-width: $big-phone-screen-width) {
-        width: 750px;
-      }
-      @media (min-width: $laptop-screen-width) {
-        width: 960px;
-      }
-      @media (min-width: $desktop-screen-width) {
         width: 1023px;
       }
     }
@@ -65,13 +53,20 @@
   transform: scaleY(0);
   transition: transform 0.3s ease, max-height 0.3s ease;
   max-height: 0;
+}
+.collapse__content {
+  box-sizing: border-box;
+  background-color: $panel-backdrop-color;
+  padding: 20px 20px 20px 20px;
+  width: 1023px;
+}
 
-  .collapse__content {
-    box-sizing: border-box;
-    background-color: $panel-backdrop-color;
-    font-size: 16px;
-    padding: 20px 20px 20px 20px;
-    width: 1023px;
+.collapse__content {
+  @media (min-width: $small-phone-screen-width) {
+    font-size: 13px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    font-size: 18px;
   }
 }
 
@@ -87,4 +82,12 @@
 .arrow-icon {
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
+  @media (min-width: $small-phone-screen-width) {
+    width: 16px;
+    height: 9px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    width: 24px;
+    height: 14px;
+  }
 }

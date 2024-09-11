@@ -1,19 +1,14 @@
 @import '../../style/variables';
 
 .header-container {
-  width: 1240px;
   margin-bottom: 30px;
   @media (min-width: $small-phone-screen-width) {
-    width: 460px;
+    width: 335px;
+    height: 47px;
   }
   @media (min-width: $big-phone-screen-width) {
-    width: 750px;
-  }
-  @media (min-width: $laptop-screen-width) {
-    width: 960px;
-  }
-  @media (min-width: $desktop-screen-width) {
-    width: 1140px;
+    width: 1240px;
+    height: 68px;
   }
 }
 
@@ -25,14 +20,28 @@
 }
 
 .kasa_logo {
-  height: 68px;
-  width: 210px;
+  @media (min-width: $small-phone-screen-width) {
+    height: 47px;
+    width: 145px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    height: 68px;
+    width: 210px;
+  }
 }
 
 .header-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media (min-width: $small-phone-screen-width) {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    text-transform: none;
+    font-size: 24px;
+  }
 }
 
 li {

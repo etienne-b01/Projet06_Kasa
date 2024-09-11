@@ -18,7 +18,7 @@ const Gallery = () => {
   ));
 
   return (
-    <div>
+    <div className="gallery__page">
       <Slideshow className="gallery__slideshow" />
       <div className="card__description">
         <div className="card__left-half">
