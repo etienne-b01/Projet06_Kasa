@@ -39,8 +39,18 @@
   grid-row-gap: 50px;
   margin-left: 0;
   margin-right: 0;
-  margin-top: 30px;
-  padding-top: 56px;
+  @media (min-width: $small-phone-screen-width) {
+    margin-top: 22px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    margin-top: 30px;
+  }
+  @media (min-width: $small-phone-screen-width) {
+    padding-top: 0px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    padding-top: 56px;
+  }
   padding-left: 0px;
   padding-right: 0px;
 }

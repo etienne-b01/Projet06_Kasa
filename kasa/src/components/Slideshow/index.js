@@ -5,14 +5,6 @@ import ControlButton from '../ControlButton/ControlButton';
 import HousingData from '../../data/logements.json';
 
 const Slideshow = () => {
-  //auto scroll below
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 10000);
-    return () => clearInterval(interval);
-  });
-
   const { id } = useParams();
   const housingIdData = HousingData.filter(item => item.id === id);
   const photoSet = housingIdData[0].pictures;

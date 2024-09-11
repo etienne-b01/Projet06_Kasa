@@ -1,5 +1,14 @@
 @import '../../style/variables';
 
+.gallery__page .container-slider {
+  @media (min-width: $small-phone-screen-width) {
+    margin-top: 0px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    margin-top: 50px;
+  }
+}
+
 .gallery {
   padding-left: 0px;
 }
@@ -9,7 +18,12 @@
   flex-direction: row;
   align-content: flex-start;
   padding-left: 0px;
-  margin-top: 10px;
+  @media (min-width: $small-phone-screen-width) {
+    margin-top: 0px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    margin-top: 10px;
+  }
 }
 
 .gallery__tags li {
@@ -40,16 +54,35 @@
 }
 
 .owner-details {
-  margin-top: 24px;
+  @media (min-width: $small-phone-screen-width) {
+    margin-top: 0px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    margin-top: 24px;
+  }
   display: flex;
   margin-bottom: 21px;
   justify-content: center;
   align-items: center;
 }
 
+.owner-details-rating {
+  @media (min-width: $small-phone-screen-width) {
+    margin-top: 0px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    margin-top: 24px;
+  }
+}
+
 .owner-details p {
   color: $heading-background-color;
-  font-size: 18px;
+  @media (min-width: $small-phone-screen-width) {
+    font-size: 12px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    font-size: 18px;
+  }
   font-weight: 500;
   max-width: 100px;
   text-align: right;
@@ -91,6 +124,7 @@
     width: 335px;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0px;
   }
   @media (min-width: $big-phone-screen-width) {
     flex-direction: row;
@@ -105,17 +139,34 @@
 }
 
 .card__left-half p {
-  font-size: 18px;
+  @media (min-width: $small-phone-screen-width) {
+    font-size: 14px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    font-size: 18px;
+  }
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .card__left-half h1 {
-  font-size: 36px;
+  @media (min-width: $small-phone-screen-width) {
+    font-size: 18px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    font-size: 36px;
+  }
   font-weight: 500;
   color: $heading-background-color;
-  margin-top: 30px;
+
+  @media (min-width: $small-phone-screen-width) {
+    margin-top: 15px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    margin-top: 30px;
+  }
+
   margin-bottom: 0px;
   text-align: left;
   @media (min-width: $small-phone-screen-width) {
@@ -129,15 +180,18 @@
 .card__right-half {
   width: 100%;
   display: flex;
+  margin-top: 0px;
   @media (min-width: $small-phone-screen-width) {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: -20px;
   }
   @media (min-width: $big-phone-screen-width) {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 0px;
   }
 }
 
@@ -152,6 +206,7 @@
   @media (min-width: $big-phone-screen-width) {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
 }
 
@@ -164,12 +219,14 @@
   }
 }
 
-.gallery__page .collapse__heading {
+.gallery__page .collapse__item .collapse__heading {
   @media (min-width: $small-phone-screen-width) {
     max-width: 335px;
+    max-height: 30px;
   }
   @media (min-width: $big-phone-screen-width) {
     max-width: 582px;
+    max-height: 52px;
   }
 }
 
