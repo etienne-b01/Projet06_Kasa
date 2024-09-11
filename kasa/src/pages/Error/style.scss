@@ -9,23 +9,34 @@
 
 .error-page-style img {
   margin-top: 139px;
-  width: 597px;
-  height: 263px;
+  @media (min-width: $small-phone-screen-width) {
+    width: 198px;
+    height: 99px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    width: 597px;
+    height: 263px;
+  }
 }
 
 .error-page-style h1 {
   font-weight: bold;
   text-align: center;
   color: $heading-background-color;
-  width: 872px;
   height: 51px;
   margin-top: 139px;
-  font-size: 36px;
   font-weight: 500;
+  @media (min-width: $small-phone-screen-width) {
+    font-size: 18px;
+    width: 260px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    font-size: 36px;
+    width: 872px;
+  }
 }
 
 .error-page-style a {
-  font-size: 18px;
   font-weight: 500;
   line-height: 25.67px;
   text-align: left;
@@ -33,6 +44,12 @@
   color: black;
   margin-top: 139px;
   margin-bottom: 139px;
+  @media (min-width: $small-phone-screen-width) {
+    font-size: 14px;
+  }
+  @media (min-width: $big-phone-screen-width) {
+    font-size: 18px;
+  }
 }
 
 .error-page-style a:hover {

@@ -7,7 +7,7 @@ const Error = () => {
   return (
     <div className="error-page-style">
       <img src={ErrorLogo} />
-      <h1>Oups ! La page demandée n'existe pas.</h1>
+      <h1>Oups ! La page que vous demandez n'existe pas.</h1>
       <NavLink to="/">Retourner sur la page d'accueil</NavLink>
     </div>
   );
