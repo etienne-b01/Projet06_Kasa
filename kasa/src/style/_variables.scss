@@ -1,4 +1,10 @@
-$main-font: Montserrat;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+$main-font: Montserrat, sans-serif;
 $panel-backdrop-color: #f6f6f6;
 $heading-background-color: #ff6060;
 $small-phone-screen-width: 480px;
