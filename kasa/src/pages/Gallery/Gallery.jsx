@@ -8,25 +8,49 @@ import Collapse from '../../components/Collapse';
 
 const Gallery = () => {
   const { id } = useParams();
-  const housingIdData = HousingData.filter(item => item.id === id);
-  const rating = housingIdData[0].rating;
-  const equipmentList = (housingIdData[0].equipments || []).map(
-    (equipment, index) => <li key={equipment}>{equipment}</li>
-  );
-  const tagList = (housingIdData[0].tags || []).map((tag, index) => (
-    <li key={tag}>{tag}</li>
+  const navigate = useNavigate();
+  const housingIdData = HousingData.find(item => item.id === id);
+
+  // If no housing data is found for the given ID, navigate to 404 and prevent rendering
+  useEffect(() => {
+    if (!housingIdData) {
+      navigate('/404');
+    }
+  }, [housingIdData, navigate]);
+
+  if (!housingIdData) {
+    return null; // Prevent further rendering
+  }
+
+  // Extracting data to be used for populating the page
+  const {
+    rating,
+    equipments,
+    tags,
+    title,
+    location,
+    host,
+    description,
+    pictures,
+  } = housingIdData;
+
+  const equipmentList = (equipments || []).map(equipment => (
+    <li key={equipment}>{equipment}</li>
   ));
+
+  const tagList = (tags || []).map(tag => <li key={tag}>{tag}</li>);
 
   return (
     <div className="gallery__page">
-      <Slideshow className="gallery__slideshow" />
+      <Slideshow className="gallery__slideshow" pictures={pictures} />
+
       <div className="card__description">
         <div className="card__left-half">
           <div>
-            <h1>{housingIdData[0].title}</h1>
+            <h1>{title}</h1>
           </div>
           <div>
-            <p>{housingIdData[0].location}</p>
+            <p>{location}</p>
           </div>
           <div className="gallery">
             <ul className="gallery__tags">{tagList}</ul>
@@ -34,23 +58,21 @@ const Gallery = () => {
         </div>
         <div className="card__right-half">
           <div className="owner-details">
-            <p>{housingIdData[0].host.name}</p>
-            <img src={housingIdData[0].host.picture}></img>
+            <p>{host.name}</p>
+            <img src={host.picture} alt={host.name} />
           </div>
           <div className="owner-details-rating">
-            {<Rating rating={rating} />}
+            <Rating rating={rating} />
           </div>
         </div>
       </div>
+
       <div className="collapse">
         <div className="half">
-          <Collapse
-            heading={'Description'}
-            content={housingIdData[0].description}
-          />
+          <Collapse heading="Description" content={description} />
         </div>
         <div className="half">
-          <Collapse heading={'Équipements'} content={equipmentList} />
+          <Collapse heading="Équipements" content={equipmentList} />
         </div>
       </div>
     </div>
