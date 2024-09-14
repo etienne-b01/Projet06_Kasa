@@ -67,7 +67,7 @@ const Gallery = () => {
         </div>
       </div>
 
-      <div className="collapse">
+      <div className="gallery__collapse">
         <div className="half">
           <Collapse heading="Description" content={description} />
         </div>

@@ -166,15 +166,8 @@
   @media (min-width: $big-phone-screen-width) {
     margin-top: 30px;
   }
-
   margin-bottom: 0px;
   text-align: left;
-  @media (min-width: $small-phone-screen-width) {
-    width: 335px;
-  }
-  @media (min-width: $big-phone-screen-width) {
-    width: 658px;
-  }
 }
 
 .card__right-half {
@@ -195,8 +188,11 @@
   }
 }
 
-.gallery__page .collapse {
+.gallery__collapse {
   display: flex;
+  //nouveau
+  //gap: 20px;
+  width: 100vw;
   @media (min-width: $small-phone-screen-width) {
     flex-direction: column;
     align-items: center;
@@ -210,7 +206,15 @@
   }
 }
 
-.gallery__page .collapse__item {
+.gallery__collapse .half {
+  //flex: 1;
+  width: 100%;
+  @media (min-width: $big-phone-screen-width) {
+    width: calc(50% - 10px);
+  }
+}
+
+/* .gallery__page .collapse__item {
   @media (min-width: $small-phone-screen-width) {
     max-width: 335px;
   }
@@ -256,3 +260,4 @@
     font-size: 18px;
   }
 }
+ */

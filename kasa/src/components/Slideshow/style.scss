@@ -2,12 +2,6 @@
 
 .container-slider {
   @media (min-width: $small-phone-screen-width) {
-    width: 335px;
-  }
-  @media (min-width: $big-phone-screen-width) {
-    width: 1240px;
-  }
-  @media (min-width: $small-phone-screen-width) {
     height: 255px;
   }
   @media (min-width: $big-phone-screen-width) {

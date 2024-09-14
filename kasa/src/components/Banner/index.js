@@ -1,6 +1,4 @@
 import React from 'react';
-import HomePageBackgroundImage from '../../assets/home_page_background_image.png';
-import AboutPageBackgroundImage from '../../assets/about_page_background_image.png';
 import { useLocation } from 'react-router-dom';
 import './style.scss';
 
@@ -10,22 +8,14 @@ const Banner = () => {
 
   return (
     <div>
-      <div className="container">
-        {
-          <img
-            src={
-              HomePageDisplayed
-                ? HomePageBackgroundImage
-                : AboutPageBackgroundImage
-            }
-            className="container__image"
-          />
+      <div
+        className={
+          HomePageDisplayed ? 'container home-page' : 'container about-page'
         }
-        {HomePageDisplayed && (
-          <h1 className="container__tagline">
-            <span>Chez vous,</span> <span>partout et ailleurs</span>
-          </h1>
-        )}
+      >
+        <h1 className="container__tagline">
+          <span>Chez vous,</span> <span>partout et ailleurs</span>
+        </h1>
       </div>
     </div>
   );

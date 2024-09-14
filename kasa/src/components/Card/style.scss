@@ -8,6 +8,7 @@
   }
   @media (min-width: $desktop-screen-width) {
     width: 1240px;
+    max-width: 100%;
   }
   @media (min-width: $small-phone-screen-width),
     (min-width: $big-phone-screen-width),
