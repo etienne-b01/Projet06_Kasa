@@ -190,9 +190,7 @@
 
 .gallery__collapse {
   display: flex;
-  //nouveau
-  //gap: 20px;
-  width: 100vw;
+  width: 95vw;
   @media (min-width: $small-phone-screen-width) {
     flex-direction: column;
     align-items: center;
@@ -207,34 +205,27 @@
 }
 
 .gallery__collapse .half {
-  //flex: 1;
   width: 100%;
   @media (min-width: $big-phone-screen-width) {
     width: calc(50% - 10px);
   }
 }
 
-/* .gallery__page .collapse__item {
-  @media (min-width: $small-phone-screen-width) {
-    max-width: 335px;
-  }
-  @media (min-width: $big-phone-screen-width) {
-    max-width: 582px;
-  }
+.gallery__collapse .collapse__item {
+  width: 100%;
 }
 
-.gallery__page .collapse__item .collapse__heading {
+.gallery__collapse .collapse__heading {
+  width: 100%;
   @media (min-width: $small-phone-screen-width) {
-    max-width: 335px;
     max-height: 30px;
   }
   @media (min-width: $big-phone-screen-width) {
-    max-width: 582px;
     max-height: 52px;
   }
 }
 
-.gallery__page .collapse__heading p {
+.gallery__collapse .collapse__heading p {
   @media (min-width: $small-phone-screen-width) {
     font-size: 13px;
   }
@@ -243,21 +234,7 @@
   }
 }
 
-.gallery__page .collapse__content {
-  @media (min-width: $small-phone-screen-width) {
-    max-width: 335px;
-  }
-  @media (min-width: $big-phone-screen-width) {
-    max-width: 582px;
-  }
+.gallery__collapse .collapse__content {
+  display: block;
+  width: 100%;
 }
-
-.gallery__page .collapse__content li {
-  @media (min-width: $small-phone-screen-width) {
-    font-size: 13px;
-  }
-  @media (min-width: $big-phone-screen-width) {
-    font-size: 18px;
-  }
-}
- */
